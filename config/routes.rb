@@ -1,4 +1,7 @@
 RailTest::Application.routes.draw do
+  root :to => "static_pages#welcome"
+  #get "/" => "static_pages#welcome"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
