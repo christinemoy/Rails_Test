@@ -2,3 +2,11 @@
 	<p>
 		On a scale of 1 to 10, you are <%= @math %>!
 	</p>
+
+	<p>Our last user is: <%= @last_user_name %> and his email is <%= @last_user_email %>.</p>
+
+<%= form_for @new_user, :url => { :action => "create" } do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :email %>
+  <%= f.submit "Create New Account", class: "btn btn-primary" %>
+<% end %>
